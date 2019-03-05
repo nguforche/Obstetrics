@@ -1,11 +1,14 @@
-Package: tvscore
+Package: Obstetrics
 Type: Package
-Title: Score data to predict TV hours
+Title: Predict successful vaginal delivery based on pregnant womans baseline characteristics 
+      before labor and at each dilation during labor
 Version: 0.3
-Date: 2017-05-13
-Author: Jeroen Ooms
-Maintainer: Jeroen Ooms <jeroen@berkeley.edu>
-Description: Example OpenCPU app to score data
+Date: 03/05/2019
+Author: Che Ngufor
+Maintainer: Che Ngufor <Ngufor.Chen@mayo.edu>
+Description: An incremental model for predicting successful delivery at baseline and at 
+      each cervical dilation during active labor. Models at each dilation are based on baseline 
+      characteristics and the model predictions at the previous dilation.  
 License: Apache License 2.0
 LazyData: false
 Depends: R (>= 2.10)
