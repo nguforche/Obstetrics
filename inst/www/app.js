@@ -43,8 +43,8 @@ $(function(){
 	//update the example curl line with the current server
 	$("#curlcode").text(
 		$("#curlcode").text().replace(
-			"https://public.opencpu.org/ocpu/github/opencpu/tvscore/R/tv/json", 
-			window.location.href.match(".*/tvscore/")[0] + "R/tv/json"
+			"http://localhost:5656/ocpu/apps/nguforche/Obstetrics/R/tv/json", 
+			window.location.href.match(".*/Obstetrics/")[0] + "R/tv/json"
 		)
 	);
 
