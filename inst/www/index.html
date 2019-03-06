@@ -16,7 +16,7 @@
     <p>An app to predict successful vagina delivery based on the pregnant woman's baseline characteristics before labor, 
     and labor specific characteristics such as dilation (cm), efficase, and station</p>
     
-     <p>The <a href="../">Obstetrics</a> scoring model includes a data object <a href="../data/tv_model">tv_model</a> and a <a href="../R/tv">scoring function</a> to predict succesfull vagina delivery based on baseline characteristics and dilation status in cm during active labor. The model was created using this script: <a href="../tv/createmodel.R"><code>createmodel.R</code></a>. The figure below shows the standard labor curve for nulliparous women:</p>
+     <p>The <a href="../">Obstetrics</a> scoring model includes a data object <a href="../data/tv_model">tv_model</a> and a <a href="../R/tv">scoring function</a> to predict succesful vagina delivery based on baseline characteristics and dilation status in cm during active labor. The model was created using this script: <a href="../tv/createmodel.R"><code>createmodel.R</code></a>. The figure below shows the standard labor curve for nulliparous women:</p>
  
     <img class="center-block img-rounded img-responsive" src="../tv/laborCurve.png">
     
@@ -25,7 +25,7 @@
       <h2>Scoring example with curl</h2>
     </div>
 
-    <p>To call the <code>tv</code> function with <code>curl</code> using basic <a href="https://www.opencpu.org/api.html#api-json">JSON RPC</a>:</p>
+    <p>To call the <code>Obstetrics</code> scoring function directly from the command line with <code>curl</code> using basic <a href="https://www.opencpu.org/api.html#api-json">JSON RPC</a>:</p>
 
     <pre class="highlight" id="curlcode">
 curl https://public.opencpu.org/ocpu/github/opencpu/tvscore/R/tv/json \
@@ -34,7 +34,7 @@ curl https://public.opencpu.org/ocpu/github/opencpu/tvscore/R/tv/json \
 </pre>
 
     <div class="page-header">
-      <h2>Scoring values with JavaScript</h2>
+      <h2>Predict successful delivery using JavaScript</h2>
     </div>
 
     <p>In this form, we use the <code>opencpu.js</code> client to score a bunch of values using basic ajax.</p>
@@ -42,7 +42,7 @@ curl https://public.opencpu.org/ocpu/github/opencpu/tvscore/R/tv/json \
     <form class="form-inline" role="form">
       <table class="table table-bordered">
         <thead>
-          <tr><th>Age</th><th>Marital Status</th><th>TV score</th></tr>
+          <tr><th>Age</th><th>Cervical Dilation</th><th>Delivery Status</th></tr>
         </thead>
         <tbody>
         </tbody>
