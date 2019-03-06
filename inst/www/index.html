@@ -28,7 +28,7 @@
     <p>To call the <code>Obstetrics</code> scoring function can be directly from the command line with <code>curl</code>:</p>
 
     <pre class="highlight" id="curlcode">
-curl https://public.opencpu.org/ocpu/github/opencpu/tvscore/R/tv/json \
+curl https://localhost:5656/ocpu/apps/nguforche/Obstetrics/R/tv/json \
 -H "Content-Type: application/json" \
 -d '{"input" : [ {"age":26, "marital" : "MARRIED"}, {"age":41, "marital":"DIVORCED"}, {"age":53, "marital":"NEVER MARRIED"} ]}'
 </pre>
@@ -68,6 +68,14 @@ curl https://public.opencpu.org/ocpu/github/opencpu/tvscore/R/tv/json \
       
     </form>
 
+  </div>
+  
+  <div class="page-header">
+    
+  <h1>Test Simple Data Processing Unit</h1>
+
+  <button id="submitbutton">Calculate Standard Deviation</button>
+  
   </div>
 
   <script src="jquery.min.js"></script>
