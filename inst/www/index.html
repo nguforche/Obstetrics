@@ -25,7 +25,7 @@
       <h2>Scoring example with curl</h2>
     </div>
 
-    <p>To call the <code>Obstetrics</code> scoring function directly from the command line with <code>curl</code> using basic <a href="https://www.opencpu.org/api.html#api-json">JSON RPC</a>:</p>
+    <p>To call the <code>Obstetrics</code> scoring function can be directly from the command line with <code>curl</code>:</p>
 
     <pre class="highlight" id="curlcode">
 curl https://public.opencpu.org/ocpu/github/opencpu/tvscore/R/tv/json \
@@ -48,12 +48,12 @@ curl https://public.opencpu.org/ocpu/github/opencpu/tvscore/R/tv/json \
         </tbody>
       </table>
       <div class="text-center">
-        <button type="button" id="scorebutton" class="btn btn-primary btn-lg">Score all values!</button>
+        <button type="button" id="scorebutton" class="btn btn-primary btn-lg">Predict Delivery</button>
       </div>
     </form>
 
     <div class="page-header">
-      <h2>Batch score CSV file</h2>
+      <h2>Predict delivery using features in a CSV file</h2>
     </div>
 
     <p>The <a href="../R/tv">scoring function</a> was designed to accept both data as well as a CSV file as input. The example below illustrates batch scoring using CSV files for both input and output. The CSV file must at least contain columns with values for <code>age</code> and <code>marital</code> (<a href="../tv/testdata.csv">example data</a>).</p>
