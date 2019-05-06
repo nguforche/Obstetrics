@@ -18,8 +18,8 @@ $(function(){
 			//repopulate the table
 			$("tbody tr").each(function(i){
 				$(this).find(".agefield").val(output[i].age);
-				$(this).find(".sexfield").val(output[i].age);
-				$(this).find(".racefield").val(output[i].age);
+				$(this).find(".sexfield").val(output[i].sex);
+				$(this).find(".racefield").val(output[i].race);
 				$(this).find(".maritalfield").val(output[i].marital);
 				$(this).find(".tvfield").val(output[i].tv);
 			});
