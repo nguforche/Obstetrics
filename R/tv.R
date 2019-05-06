@@ -18,12 +18,10 @@ tv <- function(input){
   } else {
     as.data.frame(input)
   }
-  stopifnot("age" %in% names(newdata))
-  stopifnot("marital" %in% names(newdata))
-  
+  n <- sum(c("age", "sex", "race","marital")%in%names(newdata))
+  if(n!=4) stop("all variables in test data nust match model")
   newdata$age <- as.numeric(newdata$age)
-
   #tv_model is included with the package
-  newdata$tv <- as.vector(predict.gam(tv_model, newdata = newdata))
+  newdata$tv <- as.vector(predict(tv_model, newdata = newdata))
   return(newdata)
 }

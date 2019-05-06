@@ -7,6 +7,8 @@ $(function(){
 		$("tbody tr").each(function(i){
 			data[i] = {
 				age : parseFloat($(this).find(".agefield").val()),
+				sex : $(this).find(".sexfield").val(),
+				race : $(this).find(".racefield").val(),
 				marital : $(this).find(".maritalfield").val()
 			};
 		});
@@ -16,6 +18,8 @@ $(function(){
 			//repopulate the table
 			$("tbody tr").each(function(i){
 				$(this).find(".agefield").val(output[i].age);
+				$(this).find(".sexfield").val(output[i].age);
+				$(this).find(".racefield").val(output[i].age);
 				$(this).find(".maritalfield").val(output[i].marital);
 				$(this).find(".tvfield").val(output[i].tv);
 			});
@@ -50,10 +54,14 @@ $(function(){
 
 	//this is just to create a table
 	function addrow(){
-		$("tbody").append('<tr> <td> <div class="form-group"> <input type="number" min="20" max="80" class="form-control agefield" placeholder="Age"> </div> </td> <td> <div class="form-group"> <select class="form-control maritalfield"> <option>MARRIED</option> <option>DIVORCED</option> <option>WIDOWED</option> <option>NEVER MARRIED</option> </select> </div> </td> <td> <div class="form-group"> <input disabled="disabled" class="disabled form-control tvfield"> </div> </td> </tr>');
+		$("tbody").append(
+	'<tr> <td> <div class="form-group"> <input type="number" min="20" max="80" class="form-control agefield" placeholder="Age"></div> </td>' + 
+	'<td> <div class="form-group"> <select class="form-control sexfield"> <option>MALE</option> <option>FEMALE</option></select> </div> </td>' +  
+	'<td> <div class="form-group"> <select class="form-control racefield"> <option>WHITE</option> <option>BLACK</option><option>OTHER</option></select></div> </td>' + 
+	'<td> <div class="form-group"> <select class="form-control maritalfield"> <option>MARRIED</option> <option>DIVORCED</option> <option>WIDOWED</option> <option>NEVER MARRIED</option> </select> </div> </td> <td> <div class="form-group"> <input disabled="disabled" class="disabled form-control tvfield"> </div> </td> </tr>');
 	}
 
-	for(var i = 0; i < 8; i++){
+	for(var i = 0; i < 4; i++){
 		addrow();
 	}
 });
