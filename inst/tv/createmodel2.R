@@ -33,6 +33,7 @@ newdata <- data.frame(
    
 tv <- predict(tv_model, newdata = newdata)
 
+write.csv(newdata, file="C:/Users/m133937/Dropbox/Research/Deployment/computation/Obstetrics/testdata.csv", row.names = FALSE)
 
 
   
